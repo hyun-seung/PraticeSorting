@@ -12,5 +12,4 @@ public class SortAppApplication {
 		MainController mainController = new MainController();
 		mainController.run();
 	}
-
 }
