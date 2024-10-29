@@ -1,13 +1,16 @@
 package com.pratice.sortApp;
 
-import org.springframework.boot.SpringApplication;
+import com.pratice.sortApp.controller.MainController;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SortAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SortAppApplication.class, args);
+//		SpringApplication.run(SortAppApplication.class, args);
+
+		MainController mainController = new MainController();
+		mainController.run();
 	}
 
 }
