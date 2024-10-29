@@ -9,9 +9,9 @@ import com.pratice.sortApp.util.StringUtil;
         -> 비교작업 (O(N)) x 트리의 높이 (O(logN)
     - 특징 : 정렬과정에서 추가적인 보조 배열 공간을 사용하기 때문에 메모리 사용량 높음.
  */
-public class MergeSortTopDown implements ExecutableSort {
+public class MergeSortButtomUP implements ExecutableSort {
 
-    private int[] sorted;
+    private static int[] sorted;
 
     @Override
     public void run(int[] a) {
@@ -26,16 +26,17 @@ public class MergeSortTopDown implements ExecutableSort {
     }
 
     private void mergeSort(int[] a, int left, int right) {
-        if (left == right) {
-            return;
+        for (int size = 1; size <= right; size += size) {
+            /*
+                size = 1;
+             */
+            for (int i = 0; i<=right - size; i += (2*size)) {
+                int low = i;
+                int mid = low + size - 1;
+                int high = Math.min(low + (2*size) - 1, right);
+                merge(a, low, mid, high);
+            }
         }
-
-        int mid = (left + right) / 2;
-
-        mergeSort(a, left, mid);
-        mergeSort(a, mid+1, right);
-
-        merge(a, left, mid, right);
     }
 
     private void merge(int[] a, int left, int mid, int right) {
