@@ -20,6 +20,7 @@ public class MainController {
     }
 
     public SortType getSortType() {
+        System.out.println();
         System.out.println(SEPERATE_LINE);
         System.out.println(SortType.getInfo());
         System.out.println(SEPERATE_LINE);
