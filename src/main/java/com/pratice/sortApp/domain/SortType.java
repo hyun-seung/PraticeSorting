@@ -1,18 +1,18 @@
 package com.pratice.sortApp.domain;
 
 import com.pratice.sortApp.sort.ExecutableSort;
-import com.pratice.sortApp.sort.mergeSort.BubbleSort;
+import com.pratice.sortApp.sort.BubbleSort;
+import com.pratice.sortApp.sort.InsertionSort;
 import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
-import com.pratice.sortApp.sort.mergeSort.MergeSortTopDown;
 
-import java.lang.reflect.Executable;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public enum SortType {
 
     MERGE_SORT("병합 정렬", "O(NlogN)", new MergeSortButtomUP()),
-    BUBBLE_SORT("버블 정렬", "O(N^2)", new BubbleSort());
+    BUBBLE_SORT("버블 정렬", "O(N^2)", new BubbleSort()),
+    INSERTION_SORT("삽입 정렬", "O(N^2)", new InsertionSort());
 
     private final int num;
     private final String name;

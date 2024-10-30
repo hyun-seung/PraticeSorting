@@ -1,6 +1,5 @@
-package com.pratice.sortApp.sort.mergeSort;
+package com.pratice.sortApp.sort;
 
-import com.pratice.sortApp.sort.ExecutableSort;
 import com.pratice.sortApp.util.StringUtil;
 
 /*
@@ -21,17 +20,17 @@ public class BubbleSort implements ExecutableSort {
     }
 
     private void bubbleSort(int[] a, int size) {
-        for (int i=1; i<size; i++) {
+        for (int i = 1; i < size; i++) {
             boolean swapped = false;
 
-            for (int j=0; j<size - 1; j++) {
-                if (a[j] > a[j+1]) {
-                    swap(a, j, j+1);
+            for (int j = 0; j < size - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    swap(a, j, j + 1);
                     swapped = true;
                 }
 
                 StringBuilder sb = new StringBuilder();
-                for (int k=0; k<size; k++) {
+                for (int k = 0; k < size; k++) {
                     sb.append(a[k] + " ");
                 }
                 System.out.println(sb.toString());
