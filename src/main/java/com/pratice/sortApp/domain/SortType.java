@@ -5,6 +5,7 @@ import com.pratice.sortApp.sort.BubbleSort;
 import com.pratice.sortApp.sort.InsertionSort;
 import com.pratice.sortApp.sort.SelectionSort;
 import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
+import com.pratice.sortApp.sort.quickSort.QuickSortLeftSide;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -14,7 +15,8 @@ public enum SortType {
     MERGE_SORT("병합 정렬", "O(NlogN)", new MergeSortButtomUP()),
     BUBBLE_SORT("버블 정렬", "O(N^2)", new BubbleSort()),
     INSERTION_SORT("삽입 정렬", "O(N^2)", new InsertionSort()),
-    SELECTION_SORT("선택 정렬", "O(N^2)", new SelectionSort());
+    SELECTION_SORT("선택 정렬", "O(N^2)", new SelectionSort()),
+    QUICK_SORT("퀵 정렬", "O(NlogN)", new QuickSortLeftSide());
 
     private final int num;
     private final String name;

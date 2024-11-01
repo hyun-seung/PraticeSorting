@@ -2,6 +2,7 @@ package com.pratice.sortApp.sort;
 
 import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
 import com.pratice.sortApp.sort.mergeSort.MergeSortTopDown;
+import com.pratice.sortApp.sort.quickSort.QuickSortLeftSide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -35,7 +36,8 @@ class ExecutableSortTest {
                 new MergeSortButtomUP(),
                 new BubbleSort(),
                 new InsertionSort(),
-                new SelectionSort()
+                new SelectionSort(),
+                new QuickSortLeftSide()
         );
     }
 
