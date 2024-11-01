@@ -26,7 +26,7 @@ public class MainController {
         System.out.println(SEPERATE_LINE);
 
         System.out.println("정렬 방식을 고르세요 :)");
-        String input = scanner.next();
+        String input = scanner.nextLine();
 
         SortType sortType;
         try {
@@ -40,17 +40,17 @@ public class MainController {
     }
 
     public int[] getIntArray() {
-        System.out.println("숫자 배열을 입력해주세요. ','로 구분해주시면 됩니다. ex) 1, 11, 111");
+        System.out.println("숫자 배열을 입력해주세요. ' '로 구분해주시면 됩니다. ex) 1 11 111");
         System.out.println("입력하기 귀찮으실 경우 0을 입력해주세요. 자동으로 다섯 숫자를 만들겠습니다 ^ㅡ^ ");
-        String input = scanner.next();
+        String input = scanner.nextLine();
 
         try {
             if (input.trim().equals("0")) {
                 return generateRandomNumbers(5);
             }
 
-            return Arrays.stream(input.split(","))
-                    .map(String::trim)
+            return Arrays.stream(input.split("\\s+"))
+//                    .map(String::trim)
                     .mapToInt(Integer::parseInt)
                     .toArray();
         } catch (Exception e) {
