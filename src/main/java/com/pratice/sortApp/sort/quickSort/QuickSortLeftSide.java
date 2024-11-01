@@ -14,25 +14,23 @@ public class QuickSortLeftSide implements ExecutableSort {
     public int[] run(int[] a) {
         System.out.println("\n입력 배열 : " + StringUtil.getLineByIntArray(a));
 
-        quickSort_Left(a, 0, a.length - 1);
+        quickSort_left(a, 0, a.length - 1);
 
         System.out.println("최종 배열 : " + StringUtil.getLineByIntArray(a));
         return a;
     }
 
-    private void quickSort_Left(int[] a, int lo, int hi) {
+    private void quickSort_left(int[] a, int lo, int hi) {
         if (lo >= hi) {
             return;
         }
 
         int pivot = partition(a, lo, hi);
-
         System.out.println("피벗 : " + a[pivot]);
         System.out.println(StringUtil.getLineByIntArray(a));
 
-        quickSort_Left(a, lo, pivot - 1);
-
-        quickSort_Left(a, pivot + 1, hi);
+        quickSort_left(a, lo, pivot - 1);
+        quickSort_left(a, pivot + 1, hi);
     }
 
     private int partition(int[] a, int left, int right) {
