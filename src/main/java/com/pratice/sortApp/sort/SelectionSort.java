@@ -23,10 +23,19 @@ public class SelectionSort implements ExecutableSort {
             int min_index = i;
 
             for (int j=i+1; j<size; j++) {
-                min_index = j;
+                if (a[j] < a[min_index]) {
+                    min_index = j;
+                }
             }
 
             swap(a, min_index, i);
+
+            StringBuilder sb = new StringBuilder();
+            for (int k=0; k<size; k++) {
+                sb.append(a[k] + " ");
+            }
+            sb.append("\n");
+            System.out.println(sb.toString());
         }
     }
 

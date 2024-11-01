@@ -3,6 +3,7 @@ package com.pratice.sortApp.domain;
 import com.pratice.sortApp.sort.ExecutableSort;
 import com.pratice.sortApp.sort.BubbleSort;
 import com.pratice.sortApp.sort.InsertionSort;
+import com.pratice.sortApp.sort.SelectionSort;
 import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
 
 import java.util.Arrays;
@@ -12,7 +13,8 @@ public enum SortType {
 
     MERGE_SORT("병합 정렬", "O(NlogN)", new MergeSortButtomUP()),
     BUBBLE_SORT("버블 정렬", "O(N^2)", new BubbleSort()),
-    INSERTION_SORT("삽입 정렬", "O(N^2)", new InsertionSort());
+    INSERTION_SORT("삽입 정렬", "O(N^2)", new InsertionSort()),
+    SELECTION_SORT("선택 정렬", "O(N^2)", new SelectionSort());
 
     private final int num;
     private final String name;
