@@ -14,7 +14,7 @@ public class MergeSortButtomUP implements ExecutableSort {
     private static int[] sorted;
 
     @Override
-    public void run(int[] a) {
+    public int[] run(int[] a) {
         System.out.println("\n입력 배열 : " + StringUtil.getLineByIntArray(a));
 
         sorted = new int[a.length];
@@ -23,6 +23,7 @@ public class MergeSortButtomUP implements ExecutableSort {
         sorted = null;
 
         System.out.println("최종 배열 : " + StringUtil.getLineByIntArray(a));
+        return a;
     }
 
     private void mergeSort(int[] a, int left, int right) {
