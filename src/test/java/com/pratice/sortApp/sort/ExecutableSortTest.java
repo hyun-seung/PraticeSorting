@@ -4,6 +4,7 @@ import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
 import com.pratice.sortApp.sort.mergeSort.MergeSortTopDown;
 import com.pratice.sortApp.sort.quickSort.QuickSortLeftSide;
 import com.pratice.sortApp.sort.quickSort.QuickSortMid;
+import com.pratice.sortApp.sort.quickSort.QuickSortRightSide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -39,7 +40,8 @@ class ExecutableSortTest {
                 new InsertionSort(),
                 new SelectionSort(),
                 new QuickSortLeftSide(),
-                new QuickSortMid()
+                new QuickSortMid(),
+                new QuickSortRightSide()
         );
     }
 
