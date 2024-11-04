@@ -1,5 +1,7 @@
 package com.pratice.sortApp.sort;
 
+import com.pratice.sortApp.sort.heapSort.HeapSort;
+import com.pratice.sortApp.sort.heapSort.HeapSortRecursion;
 import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
 import com.pratice.sortApp.sort.mergeSort.MergeSortTopDown;
 import com.pratice.sortApp.sort.quickSort.QuickSortLeftSide;
@@ -41,7 +43,9 @@ class ExecutableSortTest {
                 new SelectionSort(),
                 new QuickSortLeftSide(),
                 new QuickSortMid(),
-                new QuickSortRightSide()
+                new QuickSortRightSide(),
+                new HeapSortRecursion(),
+                new HeapSort()
         );
     }
 

@@ -1,12 +1,8 @@
 package com.pratice.sortApp.domain;
 
-import com.pratice.sortApp.sort.ExecutableSort;
-import com.pratice.sortApp.sort.BubbleSort;
-import com.pratice.sortApp.sort.InsertionSort;
-import com.pratice.sortApp.sort.SelectionSort;
+import com.pratice.sortApp.sort.*;
+import com.pratice.sortApp.sort.heapSort.HeapSort;
 import com.pratice.sortApp.sort.mergeSort.MergeSortButtomUP;
-import com.pratice.sortApp.sort.quickSort.QuickSortLeftSide;
-import com.pratice.sortApp.sort.quickSort.QuickSortMid;
 import com.pratice.sortApp.sort.quickSort.QuickSortRightSide;
 
 import java.util.Arrays;
@@ -18,7 +14,8 @@ public enum SortType {
     BUBBLE_SORT("버블 정렬", "O(N^2)", new BubbleSort()),
     INSERTION_SORT("삽입 정렬", "O(N^2)", new InsertionSort()),
     SELECTION_SORT("선택 정렬", "O(N^2)", new SelectionSort()),
-    QUICK_SORT("퀵 정렬", "O(NlogN)", new QuickSortRightSide());
+    QUICK_SORT("퀵 정렬", "O(NlogN)", new QuickSortRightSide()),
+    HEAP_SORT("힙 정렬", "O(NlogN)", new HeapSort());
 
     private final int num;
     private final String name;
