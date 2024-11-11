@@ -46,7 +46,8 @@ class ExecutableSortTest {
                 new QuickSortRightSide(),
                 new HeapSortRecursion(),
                 new HeapSort(),
-                new BinaryInsertionSort()
+                new BinaryInsertionSort(),
+                new TimSort()
         );
     }
 
