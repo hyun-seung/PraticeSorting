@@ -17,7 +17,8 @@ public enum SortType {
     QUICK_SORT("퀵 정렬", "O(NlogN)", new QuickSortRightSide()),
     HEAP_SORT("힙 정렬", "O(NlogN)", new HeapSort()),
     BINARY_INSERTION_SORT("이진 삽입 정렬", "O(N^2)", new BinaryInsertionSort()),
-    TIM_SORT("팀 정렬", "O(NlogN)", new TimSort());
+    TIM_SORT("팀 정렬", "O(NlogN)", new TimSort()),
+    COUNTING_SORT("카운팅 정렬", "O(N)", new CountingSort());
 
     private final int num;
     private final String name;
