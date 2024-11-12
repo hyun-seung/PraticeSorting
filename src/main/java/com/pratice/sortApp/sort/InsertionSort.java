@@ -12,11 +12,7 @@ public class InsertionSort implements ExecutableSort {
 
     @Override
     public int[] run(int[] a) {
-        System.out.println("\n입력 배열 : " + StringUtil.getLineByIntArray(a));
-
         insertionSort(a, a.length);
-
-        System.out.println("최종 배열 : " + StringUtil.getLineByIntArray(a));
         return a;
     }
 

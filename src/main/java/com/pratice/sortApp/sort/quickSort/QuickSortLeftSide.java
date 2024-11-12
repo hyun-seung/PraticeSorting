@@ -12,11 +12,7 @@ public class QuickSortLeftSide implements ExecutableSort {
 
     @Override
     public int[] run(int[] a) {
-        System.out.println("\n입력 배열 : " + StringUtil.getLineByIntArray(a));
-
         quickSort_left(a, 0, a.length - 1);
-
-        System.out.println("최종 배열 : " + StringUtil.getLineByIntArray(a));
         return a;
     }
 

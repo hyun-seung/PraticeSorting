@@ -1,6 +1,7 @@
 package com.pratice.sortApp.controller;
 
 import com.pratice.sortApp.domain.SortType;
+import com.pratice.sortApp.sort.ExecutableSortProxy;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -16,7 +17,9 @@ public class MainController {
     public void run() {
         SortType sortType = getSortType();
         int[] intArray = getIntArray();
-        sortType.getTask().run(intArray);
+
+        ExecutableSortProxy executableSortProxy = new ExecutableSortProxy(sortType.getTask());
+        executableSortProxy.run(intArray);
     }
 
     public SortType getSortType() {

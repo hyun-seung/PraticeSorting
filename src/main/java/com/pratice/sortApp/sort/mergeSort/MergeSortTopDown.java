@@ -15,14 +15,11 @@ public class MergeSortTopDown implements ExecutableSort {
 
     @Override
     public int[] run(int[] a) {
-        System.out.println("\n입력 배열 : " + StringUtil.getLineByIntArray(a));
-
         sorted = new int[a.length];
         mergeSort(a, 0, a.length - 1);
 
         sorted = null;
 
-        System.out.println("최종 배열 : " + StringUtil.getLineByIntArray(a));
         return a;
     }
 

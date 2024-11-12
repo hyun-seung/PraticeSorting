@@ -11,8 +11,6 @@ public class BinaryInsertionSort implements ExecutableSort {
 
     @Override
     public int[] run(int[] a) {
-        System.out.println("\n입력 배열 : " + StringUtil.getLineByIntArray(a));
-
         if (a.length < 2) {
             return a;
         }
@@ -22,8 +20,6 @@ public class BinaryInsertionSort implements ExecutableSort {
         System.out.println("순수 정렬 위치 : " + incLength + "\n");
 
         binaryInsertionSort(a, 0, a.length, incLength);
-
-        System.out.println("최종 배열 : " + StringUtil.getLineByIntArray(a));
         return a;
     }
 
