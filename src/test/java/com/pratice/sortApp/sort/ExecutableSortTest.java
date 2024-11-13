@@ -48,7 +48,9 @@ class ExecutableSortTest {
                 new HeapSort(),
                 new BinaryInsertionSort(),
                 new TimSort(),
-                new CountingSort()
+                new CountingSort(),
+                new ShellSort()
+
         );
     }
 
